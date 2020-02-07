@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Logowanie</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+        body{
+            background: url(tlo.jpg);
+            font-family: 'Roboto', sans-serif;
+        }
+        #logo{
+            width: 70px;
+            height: 70px;
+        }
+        #divlogo{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        #txtlogo h1{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        #pole{
+            position: relative;
+            background: rgb(232,232,232);
+            width: 300px;
+            height: 320px;
+            border-radius: 5px;
+        }
+        #pole h3{
+            position: relative;
+            font-size: 17px;
+            top: 40px;
+            left: 40px;
+        }
+        #pole img{
+            position: relative;
+            left: 75%;
+            width: 25px;
+            height: 25px;
+        }
+        #inputlogin, #inputpass{
+            width: 70%;
+            height: 32px;
+            margin-top: 5%;
+            border-width: 0px;
+            border-radius: 5px;
+        }
+        #login{
+            position: relative;
+            left: 40px;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        #check{
+            margin-top: 5%;
+            font-size: 15px;
+        }
+        #login button{
+            position: relative;
+            background: rgb(115, 180, 214);
+            width: 50%;
+            height: 35px;
+            border-width: 0px;
+            border-color: rgb(115, 180, 214);
+            border-radius: 5px;
+            margin-top: 20px;
+            color: white;
+            font-size: 16px;
+            left: 30px;
+        }
+        #pamietasz{
+            position: relative;
+            font-size: 14px;
+            color: gray;
+            top: 10px;
+            left: 26%;
+            text-decoration: none;
+        }
+        #stworzona p{
+            display: flex;
+            justify-content: center; 
+            line-height: 10px;         
+        }
+        #stworzona a{
+            color: black;
+        }
+        #stworzona{
+            position: relative;
+            margin-top: 50px;
+        }
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }       
+    </style>
+</head>
+<body>
+    <div id="divlogo">
+        <img id="logo" src="logo.png" alt="logo">
+    </div>
+    <div id="txtlogo">
+        <h1>Powered by twoje imię</h1>
+    </div>
+
+    <section>
+    <div id="pole">
+        <h3>Zaloguj się</h3>
+        <img src="lang.png">
+        
+        <form id="login">
+            <input type="text" name="login" id="inputlogin" placeholder="Email"> <br>
+            <input type="password" name="password" id="inputpass" placeholder="Hasło"> <br>
+            
+            <input type="checkbox" name="remember" id="check"> Zapamiętaj mnie <br>
+            <button>Zaloguj</button>
+        </form>
+        <a id="pamietasz" href="#">Nie pamiętasz hasła?</a>
+    </div>
+    </section>
+    <div id="stworzona">
+        <p>Ta strona jest produktem stworzonym przez Twoje Imię</p>
+        <p>Dowiedz się więcej tutaj&nbsp<a href="www.google.com"> www.google.com</a></p> <br>
+        <p><a href="#">Polityka prywatności</a></p>
+    </div>
+</body>
+</html>
