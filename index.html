@@ -60,10 +60,6 @@
         ::placeholder{
             text-align: center;
         }
-        .login-form__remember-message{
-            margin-top: 5%;
-            font-size: 15px;
-        }
         .login-form__button{
             position: relative;
             background: rgb(115, 180, 214);
@@ -101,7 +97,37 @@
             position: relative;
             display: flex;
             justify-content: center;
-        }       
+        }    
+        .checkbox-style{
+            display: block;
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            font-size: 17px;
+        }
+        .checkbox-style__input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark{
+            position: absolute;
+            top: 12px;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            background: rgb(255, 255, 255);
+            border-radius: 3px;
+        }
+        .checkbox-style:hover input ~ .checkmark{
+            background: rgb(255, 255, 255);
+        }
+        .checkbox-style input:checked ~ .checkmark{
+            background: rgb(115, 180, 214);
+        }
     </style>
 </head>
 <body>
@@ -136,7 +162,11 @@
             <input type="text" name="login" class="login-form__login" placeholder="Email"> <br>
             <input type="password" name="password" class="login-form__password" placeholder="Hasło"> <br>
             
-            <input type="checkbox" name="remember" class="login-form__remember-message"> Zapamiętaj mnie <br>
+            <label class="checkbox-style">
+                <input type="checkbox" name="remember" class="checkbox-style__input"> Zapamiętaj mnie <br>
+                <span class="checkmark"></span>
+            </label>
+
             <button class="login-form__button">Zaloguj</button>
         </form>
         <a class="login__password-message" href="#">Nie pamiętasz hasła?</a>
