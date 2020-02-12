@@ -11,60 +11,60 @@
             background: url(tlo.jpg);
             font-family: 'Roboto', sans-serif;
         }
-        .logo{
+        .logo__image{
             width: 70px;
             height: 70px;
         }
-        .divlogo{
+        .logo-image{
             position: relative;
             display: flex;
             justify-content: center;
         }
-        .txtlogo h1{
+        .header-text__h1{
             position: relative;
             display: flex;
             justify-content: center;
             font-size: 15px;
             text-transform: uppercase;
         }
-        .pole{
+        .login{
             position: relative;
             background: rgb(232,232,232);
             width: 300px;
             height: 320px;
             border-radius: 5px;
         }
-        .pole h3{
+        .login__h3{
             position: relative;
             font-size: 17px;
             top: 40px;
             left: 40px;
         }
-        .pole img{
+        .login__img{
             position: relative;
             left: 75%;
             width: 25px;
             height: 25px;
         }
-        .inputlogin, .inputpass{
+        .login-form__login, .login-form__password{
             width: 70%;
             height: 32px;
             margin-top: 5%;
             border-width: 0px;
             border-radius: 5px;
         }
-        .login{
+        .login-form{
             position: relative;
             left: 40px;
         }
         ::placeholder{
             text-align: center;
         }
-        .check{
+        .login-form__remember-message{
             margin-top: 5%;
             font-size: 15px;
         }
-        .login button{
+        .login-form__button{
             position: relative;
             background: rgb(115, 180, 214);
             width: 50%;
@@ -77,7 +77,7 @@
             font-size: 16px;
             left: 30px;
         }
-        .pamietasz{
+        .login__password-message{
             position: relative;
             font-size: 14px;
             color: gray;
@@ -85,15 +85,15 @@
             left: 26%;
             text-decoration: none;
         }
-        .stworzona p{
+        .footer-text__p{
             display: flex;
             justify-content: center; 
             line-height: 10px;         
         }
-        .stworzona a{
+        .footer-text__a{
             color: black;
         }
-        .stworzona{
+        .footer-text{
             position: relative;
             margin-top: 50px;
         }
@@ -120,32 +120,32 @@
     8. w polu password - wprowadź ikonkę oka z https://fontawesome.com/ (podepnij te fonty pod stronę) 
     -->
       
-    <div class="divlogo">
-        <img class="logo" src="logo.png" alt="logo">
+    <div class="logo-image">
+        <img class="logo__image" src="logo.png" alt="logo">
     </div>
-    <div class="txtlogo">
-        <h1>Powered by twoje imię</h1>
+    <div class="header-text">
+        <h1 class="header-text__h1">Powered by twoje imię</h1>
     </div>
 
     <section>
-    <div class="pole">
-        <h3>Zaloguj się</h3>
-        <img src="lang.png">
+    <div class="login">
+        <h3 class="login__h3">Zaloguj się</h3>
+        <img src="lang.png" class="login__img">
         
-        <form class="login">
-            <input type="text" name="login" class="inputlogin" placeholder="Email"> <br>
-            <input type="password" name="password" class="inputpass" placeholder="Hasło"> <br>
+        <form class="login-form">
+            <input type="text" name="login" class="login-form__login" placeholder="Email"> <br>
+            <input type="password" name="password" class="login-form__password" placeholder="Hasło"> <br>
             
-            <input type="checkbox" name="remember" class="check"> Zapamiętaj mnie <br>
-            <button>Zaloguj</button>
+            <input type="checkbox" name="remember" class="login-form__remember-message"> Zapamiętaj mnie <br>
+            <button class="login-form__button">Zaloguj</button>
         </form>
-        <a class="pamietasz" href="#">Nie pamiętasz hasła?</a>
+        <a class="login__password-message" href="#">Nie pamiętasz hasła?</a>
     </div>
     </section>
-    <div class="stworzona">
-        <p>Ta strona jest produktem stworzonym przez Twoje Imię</p>
-        <p>Dowiedz się więcej tutaj&nbsp<a href="www.google.com"> www.google.com</a></p> <br>
-        <p><a href="#">Polityka prywatności</a></p>
+    <div class="footer-text">
+        <p class="footer-text__p">Ta strona jest produktem stworzonym przez Twoje Imię</p>
+        <p class="footer-text__p">Dowiedz się więcej tutaj&nbsp<a href="www.google.com"> www.google.com</a></p> <br>
+        <p class="footer-text__p"><a href="#" class="footer-text__a">Polityka prywatności</a></p>
     </div>
 </body>
 </html>
