@@ -12,8 +12,9 @@
             font-family: 'Roboto', sans-serif;
         }
         .logo__image{
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
+            margin-top: 52px;
         }
         .logo-image{
             position: relative;
@@ -24,61 +25,75 @@
             position: relative;
             display: flex;
             justify-content: center;
-            font-size: 15px;
+            font-size: 18px;
             text-transform: uppercase;
+            margin-top: 20px;
         }
         .login{
             position: relative;
             background: rgb(232,232,232);
-            width: 300px;
-            height: 320px;
+            width: 355px;
+            height: 315px;
             border-radius: 5px;
+            margin-top: 30px;
         }
         .login__h3{
             position: relative;
-            font-size: 17px;
-            top: 40px;
-            left: 40px;
+            font-size: 19px;
+            margin-top: 50px;
+            margin-left: 50px;
+            display: block;
+            float: left;
+
         }
         .login__img{
+            display: block;
             position: relative;
-            left: 75%;
+            top: 50px;
+            left: 130px;
             width: 25px;
             height: 25px;
         }
         .login-form__login, .login-form__password{
-            width: 70%;
-            height: 32px;
-            margin-top: 5%;
+            width: 255px;
+            height: 35px;
+            margin-top: 0px;
+            margin-left: 50px;
             border-width: 0px;
             border-radius: 5px;
         }
+        .login-form__password{
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
         .login-form{
             position: relative;
-            left: 40px;
         }
         ::placeholder{
             text-align: center;
+            font-size: 14px;
         }
         .login-form__button{
             position: relative;
             background: rgb(115, 180, 214);
-            width: 50%;
+            width: 190px;
             height: 35px;
             border-width: 0px;
             border-color: rgb(115, 180, 214);
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 15px;
             color: white;
-            font-size: 16px;
-            left: 30px;
+            font-size: 18px;
+            left: 80px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
         }
         .login__password-message{
             position: relative;
             font-size: 14px;
             color: gray;
-            top: 10px;
-            left: 26%;
+            left: 110px;
             text-decoration: none;
         }
         .footer-text__p{
@@ -87,11 +102,16 @@
             line-height: 10px;         
         }
         .footer-text__a{
+            margin-top: 30px;
+            color: black;
+        }
+        .footer-text__google{
             color: black;
         }
         .footer-text{
             position: relative;
             margin-top: 50px;
+            font-size: 17px;
         }
         section{
             position: relative;
@@ -99,9 +119,8 @@
             justify-content: center;
         }    
         .checkbox-style{
-            display: block;
             position: relative;
-            padding-left: 22px;
+            padding-left: 73px;
             margin-bottom: 0px;
             padding-top: 10px;
             font-size: 17px;
@@ -116,11 +135,12 @@
         .checkmark{
             position: absolute;
             top: 12px;
-            left: 0;
+            left: 50px;
             height: 15px;
             width: 15px;
             background: rgb(255, 255, 255);
             border-radius: 3px;
+            cursor: pointer;
         }
         .checkbox-style:hover input ~ .checkmark{
             background: rgb(255, 255, 255);
@@ -150,7 +170,7 @@
         <img class="logo__image" src="logo.png" alt="logo">
     </div>
     <div class="header-text">
-        <h1 class="header-text__h1">Powered by twoje imię</h1>
+        <h1 class="header-text__h1">Powered by Piotr</h1>
     </div>
 
     <section>
@@ -173,8 +193,8 @@
     </div>
     </section>
     <div class="footer-text">
-        <p class="footer-text__p">Ta strona jest produktem stworzonym przez Twoje Imię</p>
-        <p class="footer-text__p">Dowiedz się więcej tutaj&nbsp<a href="www.google.com"> www.google.com</a></p> <br>
+        <p class="footer-text__p">Ta strona jest produktem stworzonym przez Piotra</p>
+        <p class="footer-text__p">Dowiedz się więcej tutaj&nbsp<a href="www.google.com" class="footer-text__google"> www.google.com</a></p>
         <p class="footer-text__p"><a href="#" class="footer-text__a">Polityka prywatności</a></p>
     </div>
 </body>
