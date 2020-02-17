@@ -6,6 +6,7 @@
     <title>Logowanie</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7eebaf51c5.js" crossorigin="anonymous"></script>
     <style>
         body{
             background: url(tlo.jpg);
@@ -148,6 +149,13 @@
         .checkbox-style input:checked ~ .checkmark{
             background: rgb(115, 180, 214);
         }
+        .login-form__font{
+            font-size: 20px; 
+            color: gray;
+            position: absolute;
+            top: 126px;
+            left: 265px;
+        }
     </style>
 </head>
 <body>
@@ -180,8 +188,12 @@
         
         <form class="login-form">
             <input type="text" name="login" class="login-form__login" placeholder="Email"> <br>
-            <input type="password" name="password" class="login-form__password" placeholder="Hasło"> <br>
-            
+            <input type="password" name="password" class="login-form__password" placeholder="Hasło"><br>
+
+            <span class="login-form__font">
+                <i class="far fa-eye-slash"></i>
+            </span>
+
             <label class="checkbox-style">
                 <input type="checkbox" name="remember" class="checkbox-style__input"> Zapamiętaj mnie <br>
                 <span class="checkmark"></span>
