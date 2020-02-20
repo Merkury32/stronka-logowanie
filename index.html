@@ -5,132 +5,195 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Logowanie</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7eebaf51c5.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
         body{
             background: url(tlo.jpg);
             font-family: 'Roboto', sans-serif;
         }
-        #logo{
-            width: 70px;
-            height: 70px;
+        .logo__image{
+            width: 100px;
+            height: 100px;
+            margin-top: 52px;
         }
-        #divlogo{
+        .logo-image{
             position: relative;
             display: flex;
             justify-content: center;
         }
-        #txtlogo h1{
+        .header-text__h1{
             position: relative;
             display: flex;
             justify-content: center;
-            font-size: 15px;
+            font-size: 18px;
             text-transform: uppercase;
+            margin-top: 20px;
         }
-        #pole{
+        .login{
             position: relative;
             background: rgb(232,232,232);
-            width: 300px;
-            height: 320px;
+            width: 355px;
+            height: 315px;
             border-radius: 5px;
+            margin-top: 30px;
         }
-        #pole h3{
+        .login__h3{
             position: relative;
-            font-size: 17px;
-            top: 40px;
-            left: 40px;
+            font-size: 19px;
+            margin-top: 50px;
+            margin-left: 50px;
+            display: block;
+            float: left;
+
         }
-        #pole img{
+        .login__img{
+            display: block;
             position: relative;
-            left: 75%;
+            top: 50px;
+            left: 130px;
             width: 25px;
             height: 25px;
         }
-        #inputlogin, #inputpass{
-            width: 70%;
-            height: 32px;
-            margin-top: 5%;
+        .login-form__login, .login-form__password{
+            width: 255px;
+            height: 35px;
+            margin-top: 0px;
+            margin-left: 50px;
             border-width: 0px;
             border-radius: 5px;
         }
-        #login{
+        .login-form__password{
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+        .login-form{
             position: relative;
-            left: 40px;
         }
         ::placeholder{
             text-align: center;
+            font-size: 14px;
         }
-        #check{
-            margin-top: 5%;
-            font-size: 15px;
-        }
-        #login button{
+        .login-form__button{
             position: relative;
             background: rgb(115, 180, 214);
-            width: 50%;
+            width: 190px;
             height: 35px;
             border-width: 0px;
             border-color: rgb(115, 180, 214);
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 15px;
             color: white;
-            font-size: 16px;
-            left: 30px;
+            font-size: 18px;
+            left: 80px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
         }
-        #pamietasz{
+        .login__password-message{
             position: relative;
             font-size: 14px;
             color: gray;
-            top: 10px;
-            left: 26%;
+            left: 110px;
             text-decoration: none;
         }
-        #stworzona p{
+        .footer-text__p{
             display: flex;
             justify-content: center; 
             line-height: 10px;         
         }
-        #stworzona a{
+        .footer-text__a{
+            margin-top: 30px;
             color: black;
         }
-        #stworzona{
+        .footer-text__google{
+            color: black;
+        }
+        .footer-text{
             position: relative;
             margin-top: 50px;
+            font-size: 17px;
         }
         section{
             position: relative;
             display: flex;
             justify-content: center;
-        }       
+        }    
+        .checkbox-style{
+            position: relative;
+            padding-left: 73px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            font-size: 17px;
+        }
+        .checkbox-style__input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark{
+            position: absolute;
+            top: 12px;
+            left: 50px;
+            height: 15px;
+            width: 15px;
+            background: rgb(255, 255, 255);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .checkbox-style:hover input ~ .checkmark{
+            background: rgb(255, 255, 255);
+        }
+        .checkbox-style input:checked ~ .checkmark{
+            background: rgb(115, 180, 214);
+        }
+        .login-form__font{
+            font-size: 20px; 
+            color: gray;
+            position: absolute;
+            top: 126px;
+            left: 265px;
+        }
     </style>
 </head>
 <body>
-    <div id="divlogo">
-        <img id="logo" src="logo.png" alt="logo">
+    <div class="logo-image">
+        <img class="logo__image" src="logo.png" alt="logo">
     </div>
-    <div id="txtlogo">
-        <h1>Powered by twoje imię</h1>
+    <div class="header-text">
+        <h1 class="header-text__h1">Powered by Piotr</h1>
     </div>
 
     <section>
-    <div id="pole">
-        <h3>Zaloguj się</h3>
-        <img src="lang.png">
+    <div class="login">
+        <h3 class="login__h3">Zaloguj się</h3>
+        <img src="lang.png" class="login__img">
         
-        <form id="login">
-            <input type="text" name="login" id="inputlogin" placeholder="Email"> <br>
-            <input type="password" name="password" id="inputpass" placeholder="Hasło"> <br>
-            
-            <input type="checkbox" name="remember" id="check"> Zapamiętaj mnie <br>
-            <button>Zaloguj</button>
+        <form class="login-form" id="form-login">
+            <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
+            <input type="password" name="password" class="login-form__password" placeholder="Hasło"><br>
+
+            <span class="login-form__font">
+                <i class="far fa-eye-slash"></i>
+            </span>
+
+            <label class="checkbox-style">
+                <input type="checkbox" name="remember" class="checkbox-style__input"> Zapamiętaj mnie <br>
+                <span class="checkmark"></span>
+            </label>
+
+            <button class="login-form__button" type="submit">Zaloguj</button>
         </form>
-        <a id="pamietasz" href="#">Nie pamiętasz hasła?</a>
+        <script src="main.js"></script>
+        <a class="login__password-message" href="#">Nie pamiętasz hasła?</a>
     </div>
     </section>
-    <div id="stworzona">
-        <p>Ta strona jest produktem stworzonym przez Twoje Imię</p>
-        <p>Dowiedz się więcej tutaj&nbsp<a href="www.google.com"> www.google.com</a></p> <br>
-        <p><a href="#">Polityka prywatności</a></p>
+    <div class="footer-text">
+        <p class="footer-text__p">Ta strona jest produktem stworzonym przez Piotra</p>
+        <p class="footer-text__p">Dowiedz się więcej tutaj&nbsp<a href="www.google.com" class="footer-text__google"> www.google.com</a></p>
+        <p class="footer-text__p"><a href="#" class="footer-text__a">Polityka prywatności</a></p>
     </div>
     
 </body>
