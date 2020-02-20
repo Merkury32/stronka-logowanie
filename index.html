@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7eebaf51c5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
         body{
             background: url(tlo.jpg);
@@ -164,13 +165,13 @@
     </div>
     <div class="header-text">
         <h1 class="header-text__h1">Powered by Piotr</h1>
-    </div>
-
     <section>
     <div class="login">
-        <h3 class="login__h3">Zaloguj się</h3>
-        <img src="lang.png" class="login__img">
-        
+        <div id="change">
+            <h3 class="login__h3">{{ message }}</h3>
+            <img src="lang.png" class="login__img">
+            <button v-on:click="change">Zamień</button>
+        </div>
         <form class="login-form" id="form-login">
             <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
             <input type="password" name="password" class="login-form__password" placeholder="Hasło"><br>
