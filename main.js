@@ -5,9 +5,8 @@ myForm.addEventListener('submit', function(e) {
 
     const formData =  new FormData (this);
 
-    fetch('https://jsonplaceholder.typicode.com/posts',{
+    fetch('https://www.example.com',{
         method: 'get',
-        headers: formData
     }).then(function(response){
         return response.text();
     }).then(function(text){
