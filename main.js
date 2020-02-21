@@ -1,11 +1,41 @@
 var change = new Vue({
-    el: '#change',
+    el: '#myApp',
     data: {
-      message: 'Zaloguj się'
+      lang:'pl',
+      tr:{
+        pl:{
+          headerText: "powered by piotr",
+          formHeader: "Zaloguj się",
+          passwordInput: "Hasło",
+          rememberMessage: "Zapamiętaj mnie",
+          loginButton: "Zaloguj",
+          passwordRemember: "Nie pamiętasz hasła?",
+          footerCreator: "Ta strona jest produktem stworzonym przez Piotra",
+          footerSeeMore: "Dowiedz się więcej tutaj",
+          footerPrivateText: "Polityka prywatności"
+        },
+        en:{
+          headerText: "powered by piotr",
+          formHeader: "Login",
+          passwordInput: "Password",
+          rememberMessage: "Remember me",
+          loginButton: "Login",
+          passwordRemember: "Don't remember password?",
+          footerCreator: "This site is a product created by Piotr",
+          footerSeeMore: "Learn more here",
+          footerPrivateText: "Privacy policy"
+        }
+      }
     },
     methods: {
-      changeMe() {
-        this.message = 'Zalogowany!'
+      changeMe: function(){
+        if(this.lang == "pl"){
+          this.lang = 'en';
+        }else{
+          this.lang = 'pl';
+        }
+        
       }
     }
   });
+

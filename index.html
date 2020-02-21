@@ -6,199 +6,45 @@
     <title>Logowanie</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+    <link href="main.css"  rel="stylesheet">
     <script src="https://kit.fontawesome.com/7eebaf51c5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-        body{
-            background: url(tlo.jpg);
-            font-family: 'Roboto', sans-serif;
-        }
-        .logo__image{
-            width: 100px;
-            height: 100px;
-            margin-top: 52px;
-        }
-        .logo-image{
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-        .header-text__h1{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            font-size: 18px;
-            text-transform: uppercase;
-            margin-top: 20px;
-        }
-        .login{
-            position: relative;
-            background: rgb(232,232,232);
-            width: 355px;
-            height: 315px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        .login__h3{
-            position: relative;
-            font-size: 19px;
-            margin-top: 50px;
-            margin-left: 50px;
-            display: block;
-            float: left;
-
-        }
-        .login__img{
-            display: block;
-            position: relative;
-            top: 50px;
-            left: 130px;
-            width: 25px;
-            height: 25px;
-        }
-        .login-form__login, .login-form__password{
-            width: 255px;
-            height: 35px;
-            margin-top: 0px;
-            margin-left: 50px;
-            border-width: 0px;
-            border-radius: 5px;
-        }
-        .login-form__password{
-            margin-top: 15px;
-            margin-bottom: 7px;
-        }
-        .login-form{
-            position: relative;
-        }
-        ::placeholder{
-            text-align: center;
-            font-size: 14px;
-        }
-        .login-form__button{
-            position: relative;
-            background: rgb(115, 180, 214);
-            width: 190px;
-            height: 35px;
-            border-width: 0px;
-            border-color: rgb(115, 180, 214);
-            border-radius: 5px;
-            margin-top: 15px;
-            color: white;
-            font-size: 18px;
-            left: 80px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        .login__password-message{
-            position: relative;
-            font-size: 14px;
-            color: gray;
-            left: 110px;
-            text-decoration: none;
-        }
-        .footer-text__p{
-            display: flex;
-            justify-content: center; 
-            line-height: 10px;         
-        }
-        .footer-text__a{
-            margin-top: 30px;
-            color: black;
-        }
-        .footer-text__google{
-            color: black;
-        }
-        .footer-text{
-            position: relative;
-            margin-top: 50px;
-            font-size: 17px;
-        }
-        section{
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }    
-        .checkbox-style{
-            position: relative;
-            padding-left: 73px;
-            margin-bottom: 0px;
-            padding-top: 10px;
-            font-size: 17px;
-        }
-        .checkbox-style__input{
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-        .checkmark{
-            position: absolute;
-            top: 12px;
-            left: 50px;
-            height: 15px;
-            width: 15px;
-            background: rgb(255, 255, 255);
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .checkbox-style:hover input ~ .checkmark{
-            background: rgb(255, 255, 255);
-        }
-        .checkbox-style input:checked ~ .checkmark{
-            background: rgb(115, 180, 214);
-        }
-        .login-form__font{
-            font-size: 20px; 
-            color: gray;
-            position: absolute;
-            top: 7px;
-            left: 265px;
-        }
-        #change{
-            width: 200px;
-            height: 100px;
-        }
-    </style>
 </head>
 <body>
-    <div class="logo-image">
-        <img class="logo__image" src="logo.png" alt="logo">
-    </div>
-    <div class="header-text">
-        <h1 class="header-text__h1">Powered by Piotr</h1>
-    <section>
-    <div class="login">
-        <div id="change">
-            <h3 class="login__h3">{{ message }}</h3>
-            <img v-on:click="changeMe()" src="lang.png" class="login__img">
+    <div id="myApp">
+        <div class="logo-image">
+            <img class="logo__image" src="logo.png" alt="logo">
         </div>
-        <form class="login-form" id="form-login">
-            <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
-            <input type="password" name="password" class="login-form__password" placeholder="Hasło"><br>
-
-            <span class="login-form__font">
-                <i class="far fa-eye-slash"></i>
-            </span>
-
-            <label class="checkbox-style">
-                <input type="checkbox" name="remember" class="checkbox-style__input"> Zapamiętaj mnie <br>
-                <span class="checkmark"></span>
-            </label>
-
-            <button class="login-form__button" type="submit">Zaloguj</button>
-        </form>
-        <script src="main.js"></script>
-        <a class="login__password-message" href="#">Nie pamiętasz hasła?</a>
-    </div>
-    </section>
-    <div class="footer-text">
-        <p class="footer-text__p">Ta strona jest produktem stworzonym przez Piotra</p>
-        <p class="footer-text__p">Dowiedz się więcej tutaj&nbsp<a href="www.google.com" class="footer-text__google"> www.google.com</a></p>
-        <p class="footer-text__p"><a href="#" class="footer-text__a">Polityka prywatności</a></p>
-    </div>
+        <div class="header-text">
+            <h1 class="header-text__h1">{{ tr[lang].headerText }}</h1>
+        <section>
+        <div class="login">
+                <h3 class="login__h3">{{ tr[lang].formHeader }}</h3>
+                <img v-on:click="changeMe" src="lang.png" class="login__img">
+            <form class="login-form" id="form-login">
+                <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
+                <input type="password" name="password" class="login-form__password" :placeholder="[[ tr[lang].passwordInput ]] "><br>
     
+                <span class="login-form__font">
+                    <i class="far fa-eye-slash"></i>
+                </span>
+    
+                <label class="checkbox-style">
+                    <input type="checkbox" name="remember" class="checkbox-style__input"> {{ tr[lang].rememberMessage }} <br>
+                    <span class="checkmark"></span>
+                </label>
+    
+                <button class="login-form__button" type="submit">{{ tr[lang].loginButton }}</button>
+            </form>
+            <a class="login__password-message" href="#">{{ tr[lang].passwordRemember }}</a>
+        </div>
+        </section>
+        <div class="footer-text">
+            <p class="footer-text__p">{{ tr[lang].footerCreator }}</p>
+            <p class="footer-text__p">{{ tr[lang].footerSeeMore }}&nbsp<a href="www.google.com" class="footer-text__google"> www.google.com</a></p>
+            <p class="footer-text__p"><a href="#" class="footer-text__a">{{ tr[lang].footerPrivateText }}</a></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
