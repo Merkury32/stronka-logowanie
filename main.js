@@ -4,8 +4,8 @@ var change = new Vue({
       message: 'Zaloguj się'
     },
     methods: {
-      change: function () {
+      changeMe() {
         this.message = 'Zalogowany!'
       }
     }
-  })
+  });

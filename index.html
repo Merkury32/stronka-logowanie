@@ -154,8 +154,12 @@
             font-size: 20px; 
             color: gray;
             position: absolute;
-            top: 126px;
+            top: 7px;
             left: 265px;
+        }
+        #change{
+            width: 200px;
+            height: 100px;
         }
     </style>
 </head>
@@ -169,8 +173,7 @@
     <div class="login">
         <div id="change">
             <h3 class="login__h3">{{ message }}</h3>
-            <img src="lang.png" class="login__img">
-            <button v-on:click="change">Zamień</button>
+            <img v-on:click="changeMe()" src="lang.png" class="login__img">
         </div>
         <form class="login-form" id="form-login">
             <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
