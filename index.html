@@ -20,7 +20,9 @@
         <section>
         <div class="login">
                 <h3 class="login__h3">{{ tr[lang].formHeader }}</h3>
-                <img v-on:click="changeMe" src="lang.png" class="login__img">
+                <div v-on:click="changeMe" class="lang-container">
+                    <img src="lang.png" class="login__img">
+                </div>
             <form class="login-form" id="form-login">
                 <input type="text" name="email" class="login-form__login" placeholder="Email"> <br>
                 <input type="password" name="password" class="login-form__password" :placeholder="[[ tr[lang].passwordInput ]] "><br>

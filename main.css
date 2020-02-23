@@ -38,10 +38,7 @@ body{
 
 }
 .login__img{
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 130px;
+    position: absolute;
     width: 25px;
     height: 25px;
 }
@@ -86,6 +83,8 @@ body{
     color: gray;
     left: 110px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 .footer-text__p{
     display: flex;
@@ -145,4 +144,12 @@ section{
     position: absolute;
     top: 74px;
     left: 265px;
+}
+.lang-container{
+    height: 30px;
+    width: 30px;
+    margin-top: 33px;
+    margin-left: 280px;
+    position: relative;
+    cursor: pointer;
 }
