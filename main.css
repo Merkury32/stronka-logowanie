@@ -81,7 +81,7 @@ body{
     position: relative;
     font-size: 14px;
     color: gray;
-    left: 110px;
+    left: 0px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -142,13 +142,13 @@ section{
     font-size: 20px; 
     color: gray;
     position: absolute;
-    top: 74px;
+    top: 70px;
     left: 265px;
 }
 .lang-container{
     height: 30px;
     width: 30px;
-    margin-top: 33px;
+    margin-top: 50px;
     margin-left: 280px;
     position: relative;
     cursor: pointer;
