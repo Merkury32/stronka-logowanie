@@ -12,7 +12,7 @@ var change = new Vue({
           passwordRemember: "Nie pamiętasz hasła?",
           footerCreator: "Ta strona jest produktem stworzonym przez Piotra",
           footerSeeMore: "Dowiedz się więcej tutaj",
-          footerPrivateText: "Polityka prywatności"
+          footerPrivateText: "GitHub project repo"
         },
         en:{
           headerText: "powered by piotr",
@@ -23,7 +23,7 @@ var change = new Vue({
           passwordRemember: "Don't remember password?",
           footerCreator: "This site is a product created by Piotr",
           footerSeeMore: "Learn more here",
-          footerPrivateText: "Privacy policy"
+          footerPrivateText: "GitHub project repo"
         }
       }
     },
