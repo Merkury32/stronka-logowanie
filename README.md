@@ -1,1 +1,2 @@
-[Run this project ONLINE](https://merkury32.github.io/stronka-logowanie/)
+Simple auth page with Vue.js
+[See this project online](https://merkury32.github.io/stronka-logowanie/)
